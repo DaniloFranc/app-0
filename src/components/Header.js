@@ -9,7 +9,6 @@ import UserIcon from '../icons/person_70dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg
 const Header = () => {
   const navigate = useNavigate();
 
-  
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('nvlAcesso');
@@ -86,7 +85,6 @@ const Header = () => {
           const progressBar = document.getElementById("progress");
           const progressValue = document.getElementById("progress-value");
           const ultimaInteracao = document.getElementById("ultimaInteracao");
-          const progressBox = document.getElementById("AlinLetterProgressBoxCourse");
 
           progressBar.style.width = `${progress}%`;
           progressValue.innerHTML = `${progress}%`;
@@ -150,63 +148,57 @@ const Header = () => {
               <div className="collapse navbar-collapse" id="menuNavbar">
                 <ul className="navbar-nav mx-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="#">Área do Aluno</a>
+                    <button className="nav-link" onClick={() => {}}>Área do Aluno</button>
                   </li>
                   <li className="nav-item dropdown">
-                    <a
+                    <button
                       className="nav-link dropdown-toggle"
-                      href="#"
-                      id="gestaoDropdown"
-                      role="button"
+                      type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       Cursos
-                    </a>
+                    </button>
                     <ul className="dropdown-menu" aria-labelledby="gestaoDropdown">
-                      <li><a className="dropdown-item" href="MusicTheory.html">Teoria Musical</a></li>
-                      <li><a className="dropdown-item" href="#">Leitura Melódica</a></li>
-                      <li><a className="dropdown-item" href="#">Leitura Rítmica</a></li>
-                      <li><a className="dropdown-item" href="#">Percepção Musical</a></li>
+                      <li><button className="dropdown-item" onClick={() => window.location.href = 'MusicTheory.html'}>Teoria Musical</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Leitura Melódica</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Leitura Rítmica</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Percepção Musical</button></li>
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
-                    <a
+                    <button
                       className="nav-link dropdown-toggle"
-                      href="#"
-                      id="gestaoDropdown"
-                      role="button"
+                      type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       Material de Apoio
-                    </a>
+                    </button>
                     <ul className="dropdown-menu" aria-labelledby="gestaoDropdown">
-                      <li><a className="dropdown-item" href="#">Metrônomo / Sequencer</a></li>
-                      <li><a className="dropdown-item" href="#">Play Alongs</a></li>
-                      <li><a className="dropdown-item" href="#">Referências Musicais</a></li>
-                      <li><a className="dropdown-item" href="#">Folhas</a></li>
-                      <li><a className="dropdown-item" href="#">Escalas para guitarra e violão</a></li>
-                      <li><a className="dropdown-item" href="#">Acordes para guitarra e violão</a></li>
-                      <li><a className="dropdown-item" href="#">Acordes para Ukulelê</a></li>
-                      <li><a className="dropdown-item" href="#">Acordes para Teclado</a></li>
-                      <li><a className="dropdown-item" href="#">Vocalizes</a></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Metrônomo / Sequencer</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Play Alongs</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Referências Musicais</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Folhas</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Escalas para guitarra e violão</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Acordes para guitarra e violão</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Acordes para Ukulelê</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Acordes para Teclado</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Vocalizes</button></li>
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
-                    <a
+                    <button
                       className="nav-link dropdown-toggle"
-                      href="#"
-                      id="gestaoDropdown"
-                      role="button"
+                      type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       Gestão
-                    </a>
+                    </button>
                     <ul className="dropdown-menu" aria-labelledby="gestaoDropdown">
-                      <li><a className="dropdown-item" href="CrudUsuarios.html">Usuários</a></li>
-                      <li><a className="dropdown-item" href="#">Configurações</a></li>
+                      <li><button className="dropdown-item" onClick={() => window.location.href = 'CrudUsuarios.html'}>Usuários</button></li>
+                      <li><button className="dropdown-item" onClick={() => {}}>Configurações</button></li>
                     </ul>
                   </li>
                   <div className={style.hidden} id="nivelAcessoDisplay"></div>
