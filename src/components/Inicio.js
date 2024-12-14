@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import style from '../components/modules/styleDashboard.module.css'; // Importando o CSS modular específico para esta página
-import IconPrevious from '../icons/icon-previous.svg'; // Ícone de botão anterior
-import IconNext from '../icons/icon-next.svg'; // Ícone de botão próximo
+import style from '../components/modules/styleDashboard.module.css'; 
+import IconPrevious from '../icons/icon-previous.svg';
+import IconNext from '../icons/icon-next.svg'; 
 
 const Inicio = () => {
   useEffect(() => {
@@ -13,10 +13,10 @@ const Inicio = () => {
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
 
-          // Adiciona uma classe para destacar
+          
           target.classList.add(style.highlight);
 
-          // Remove o destaque após 2 segundos
+          
           setTimeout(() => target.classList.remove(style.highlight), 2000);
         }
       });

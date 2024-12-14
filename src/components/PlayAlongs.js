@@ -1,6 +1,5 @@
 import React from 'react';
-import style from '../components/modules/styleDashboard.module.css'; // Importando CSS modular
-
+import style from '../components/modules/styleDashboard.module.css';
 const PlayAlongs = () => {
   return (
     <div>

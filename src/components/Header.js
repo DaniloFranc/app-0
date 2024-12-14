@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import style from '../components/modules/styleDashboard.module.css'; // Importando o CSS modular
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importando o Bootstrap CSS
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importando o Bootstrap JS com dependências (Popper.js)
+import style from '../components/modules/styleDashboard.module.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Logo from '../img/LogoEmPauta.png';
-import UserIcon from '../icons/person_70dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg'; // Ícone de usuário
+import UserIcon from '../icons/person_70dp_5F6368_FILL0_wght400_GRAD0_opsz48.svg'; 
 
 const Header = () => {
   const navigate = useNavigate();
 
-  // Função de logout
+  
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('nvlAcesso');
@@ -27,7 +27,7 @@ const Header = () => {
     if (nvlAcesso === '2' || nvlAcesso === '3') {
       const usuariosMenuItem = document.querySelector('a[href="CrudUsuarios.html"]');
       if (usuariosMenuItem) {
-        usuariosMenuItem.closest('li').style.display = 'none';  // Esconde o item de menu
+        usuariosMenuItem.closest('li').style.display = 'none'; 
       }
     }
 
@@ -47,7 +47,7 @@ const Header = () => {
         const response = await fetch('https://nova-pasta-5.onrender.com/dashboard-data', {
           method: 'GET',
           headers: {
-            Authorization: `Bearer ${token}`, // Envia o token no cabeçalho
+            Authorization: `Bearer ${token}`,
           },
         });
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../src/components/Header'; // Importa o componente Header
-import style from '../src/components/modules/styleDashboard.module.css'; // Importando o CSS modular
+import Header from '../src/components/Header';
+import style from '../src/components/modules/styleDashboard.module.css'; 
 import Inicio from './components/Inicio';
 import Courses from './components/Courses';
 import PlayAlongs from './components/PlayAlongs';

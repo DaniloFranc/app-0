@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../components/modules/styleDashboard.module.css'; // CSS modular específico para os cursos
+import style from '../components/modules/styleDashboard.module.css';
 import MusicTheoryImage from '../img/MusicalTheory.png';
 import MelodicReadingImage from '../img/leituraRitmica0.png';
 import RhythmicReadingImage from '../img/leituraRitmica1.png';
