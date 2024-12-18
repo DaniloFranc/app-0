@@ -71,42 +71,8 @@ const Header = () => {
 
     validateAccess();
 
-    function fetchProgress0() {
-      fetch('https://nova-pasta-5.onrender.com/get-progress', {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${localStorage.getItem('token')}`
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          const progress = data.progress || 0;
-          const progressBar = document.getElementById("progress");
-          const progressValue = document.getElementById("progress-value");
-          const ultimaInteracao = document.getElementById("ultimaInteracao");
+    
 
-          progressBar.style.width = `${progress}%`;
-          progressValue.innerHTML = `${progress}%`;
-
-          if (progress > 0) {
-            ultimaInteracao.innerHTML = `Última interação: ${progress}%`;
-          } else {
-            ultimaInteracao.innerHTML = "Última interação: Não iniciado";
-          }
-
-          const checkbox = document.getElementById('checkbox');
-          checkbox.checked = progress > 0;
-        } else {
-          console.error('Erro ao buscar o progresso:', data.message);
-        }
-      })
-      .catch(error => {
-        console.error('Erro na requisição:', error);
-      });
-    }
-
-    fetchProgress0();
   }, [navigate]);
 
   return (
